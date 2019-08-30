@@ -57,10 +57,16 @@ export const actions = {
       email: payload.email,
       nickname: payload.nickname,
       password: payload.password
-    });
-    commit('setMe', payload);
+    }).then((data) => {
+      console.log(data)
+      commit('setMe', payload);
+    })
   },
   logIn({ commit }, payload) {
+    this.$axios.post('http://localhost:3085/user/login', {
+      email: payload.email,
+      password: payload.password
+    });
     commit('setMe', payload);
   },
   logOut({ commit }, payload) {
