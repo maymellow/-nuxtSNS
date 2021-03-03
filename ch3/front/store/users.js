@@ -50,7 +50,7 @@ export const mutations = {
     state.hasMoreFollower = fakeUsers.length === limit;
   },
 };
-
+ㄹ
 export const actions = {
   signUp({ commit, state }, payload) {
     console.log(this.$axios)

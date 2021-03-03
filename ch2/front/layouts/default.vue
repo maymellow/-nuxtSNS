@@ -7,7 +7,10 @@
 				</v-toolbar-title>
 				<v-spacer></v-spacer>
 				<v-toolbar-items>
-					<v-text-field label="검색" hide-details prepend-icon="mdi-magnify" :style="{display: 'flex', alignItems: 'center'}"/>
+					<v-text-field label="검색"
+					              hide-details
+					              prepend-icon="mdi-magnify"
+					              :style="{display: 'flex', alignItems: 'center'}"/>
 					<v-btn text nuxt to="/profile" :style="{display: 'flex', alignItems: 'center'}">
 						<div>프로필</div>
 					</v-btn>
@@ -27,7 +30,6 @@
 			</v-col>
 		</v-row>
 	</v-app>
-
 </template>
 
 <script>
@@ -49,6 +51,7 @@
       }
 	  }
   }
+
 </script>
 
 <style scoped>

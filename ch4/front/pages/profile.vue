@@ -29,6 +29,7 @@
 					<v-btn @click="loadMoreFollowers" v-if="hasMoreFollower" dark color="blue" style="width: 100%">더보기</v-btn>
 				</v-container>
 			</v-card>
+			<button @click="ChangeAll">Change</button>
 		</v-container>
 	</div>
 </template>
@@ -46,6 +47,7 @@
         nicknameRules: [
           v => !!v || '닉네임을 입력하세요.',
         ],
+	      listItem: [false, false]
       };
     },
     fetch({ store }) {
@@ -67,6 +69,9 @@
       },
     },
     methods: {
+      ChangeAll () {
+        console.log(this.listItem)
+      },
       onChangeNickname() {
         this.$store.dispatch('users/changeNickname', {
           nickname: this.nickname,

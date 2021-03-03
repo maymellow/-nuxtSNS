@@ -10,7 +10,7 @@
   import PostCard from '~/components/PostCard';
 
   export default {
-    components: {PostCard},
+    components: { PostCard },
     name: 'index',
     data() {
       return {
